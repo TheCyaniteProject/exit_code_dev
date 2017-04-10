@@ -1,0 +1,1 @@
+virus_wipe_binfolder
