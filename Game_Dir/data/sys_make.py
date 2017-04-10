@@ -89,6 +89,8 @@ def make_player_profile(dict):
 	if not os.path.isfile(os.path.join(profile_dir, 'sites\\', 'email\\', 'site.ini')):
 		with open(os.path.join(profile_dir, 'sites\\', 'email\\', 'site.ini'), 'w') as f:
 			f.write('[settings]\nsitelocker=1.0\nriddleme=True')
+	if not os.path.exists(os.path.join(profile_dir, 'sites\\', 'easybits\\')): # Checks if user dir already exists
+		os.makedirs(os.path.join(profile_dir, 'sites\\', 'easybits\\')) # Creates dir if it does not
 	if not os.path.isfile(os.path.join(profile_dir, 'sites\\', 'easybits\\', 'site.ini')):
 		with open(os.path.join(profile_dir, 'sites\\', 'easybits\\', 'site.ini'), 'w') as f:
 			f.write('[settings]\nsitelocker=1.0\nriddleme=True')
@@ -102,7 +104,7 @@ I'll contact you if i need anything.\nDon't reply to this address, I don't check
 P.S: I have wired you some starting funds. Better grab you some code if you don't
 have some already. I hear DataKult has some good ones. I attached a link.
 <link=datakult.shop text=[www.DataKult.shop]>
-<link=shhmail.net text=[Send Mail Anonamously with ShhMail.net]>''' % (dict['email_ac'],dict['player_ip'],first_ip)
+<link=shhmail.net text=[Send Mail Anonamously with ShhMail.net]>''' % (dict['email_ac'],first_ip)
 	reload(mail)
 	var = mail.send(mail.dict(first_email))
 	if var == False: raise Exception('mailError')
@@ -482,5 +484,3 @@ def build_sys(root, tree=None, new=True, person=None, seed=None, IP=None, player
 
 ##build_sys('test', linux) # Debug
 
-	
-	

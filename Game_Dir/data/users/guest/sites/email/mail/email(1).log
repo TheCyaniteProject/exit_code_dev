@@ -1,18 +1,28 @@
-<to>TheFallenCyn@email.com</to>
-<from>98DJ48CBC9S@shhmail.com</from>
+<to>Guest@email.com</to>
+<from>unknown@shhmail.com</from>
 <log>
-
 <msg=f>
-Hello Newcomer.
-You can call me Cyn. I don't know why you decided to get into this life, nor do I care. All I know is that I was told to send you on your way.
+Hello newcomer. You can call me Cyn. I don't know why you decided
+to get into this life, nor do I care.
+All I know is that I was told to send you on your way.
 
-153.67.182.151 - If you've got what it takes to lead this life, that's all you'll need. I'll contact you if I need anything.
-
+163.43.203.191 - If you've got what it takes to lead this life, that's all you'll need.
+I'll contact you if i need anything.
 Don't reply to this address, I don't check it.
 
-P.S: I have wired you some starting funds. Better grab you some code if you don't have some already. I hear DataKult has some good ones. I attached a link.
+P.S: I have wired you some starting funds. Better grab you some code if you don't
+have some already. I hear DataKult has some good ones. I attached a link.
 <link=datakult.shop text=[www.DataKult.shop]>
 <link=shhmail.net text=[Send Mail Anonamously with ShhMail.net]>
+</msg>
+
+<msg=f>
+%s
+</msg>
+
+
+<msg=f>
+%s
 </msg>
 
 </log>

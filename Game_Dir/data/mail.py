@@ -116,7 +116,7 @@ def send(letter=None, location=None, service='email'):
 		email = ''
 		emails = check_email()
 		flag = False
-		for file in emails():
+		for file in emails:
 			if '_REV' in file:
 				continue
 			if emails[file]['to'].lower().strip().rstrip() == letter['to'].lower():
@@ -145,17 +145,3 @@ def send(letter=None, location=None, service='email'):
 				f.write(email)
 		return True
 	else: return False
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			

@@ -1,12 +1,5 @@
 ﻿# exit_code_dev
-
 Source Disclaimer: I am completely self-tought. My code is messy, unoptimized, under-commented, and probably used bad practices. - ..Don't hate me... Q.Q
-
-Requirements:
-	* Windows XP/Vista/7/8/10
-	* Python 2.7 (latest update) https://www.python.org/downloads/
-	* Python Imaging Library (PIL) http://www.pythonware.com/products/pil/
-
 
 Exit.Code() is a game about hacking. The plan is to take the best parts from my favorite games, combined with (of course) my own original ideas, and turn them into something great!
 

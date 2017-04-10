@@ -205,7 +205,7 @@ def create(network, acname, amount=None, profile=None, passw=None, user=None):
 		amount = '0.00'
 	if not os.path.exists(file_dir+'.ini') == True:
 		with open(file_dir+'.ini', 'w') as f:
-			f.write(str(amount)+'\n'+str(passw)+'\n'+user['email_ac'])
+			f.write('%s\n%s\n%s' % (amount, passw, user['email_ac']))
 	if not os.path.exists(file_dir+'.whitelist') == True:
 		with open(file_dir+'.whitelist', 'w') as f:
 			f.write(user['IP'])
