@@ -1,44 +1,49 @@
-﻿# exit_code_dev
-Source Disclaimer: I am completely self-tought. My code is messy, unoptimized, under-commented, and probably used bad practices. - ..Don't hate me... Q.Q
+﻿![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
+#### A Python game about Hacking.
+
+Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably used bad practices. - ..Don't hate me... Q.Q
 
 Requirements:
 
-	* Windows XP/Vista/7/8/10
-	* Python2.7 (will move to Python3.6 soon) https://www.python.org/downloads/
-	* Python Imaging Library (PIL) http://www.pythonware.com/products/pil/
+1. Windows XP/Vista/7/8/10
+2. Python2.7 (we will move to Python3.6 soon) https://www.python.org/downloads/
+3. Python Imaging Library (PIL) http://www.pythonware.com/products/pil/
 
 Exit.Code() is a game about hacking. The plan is to take the best parts from my favorite games, combined with (of course) my own original ideas, and turn them into something great!
 
-Here is a brief over view of whats to come, and what EC has RIGHT NOW:
+Here is a brief overview of what's to come, and what EC has RIGHT NOW:
+
 (last updated April/9/2017)
 
-You know how i said "Exit.Code() is a game about hacking."? Well, it wont be.
+You know how I said "Exit.Code() is a game about hacking."? Well, it won't be.
 
 In the end, Exit.Code() will be, by all means, a computer/desktop simulator. The main attraction will be hacking, of course. But you will be able to do so much more.
 
 
-	* Full Multi-Platform Support (Windows/Linux/Mac)
-	* Realistic PC Desktop
-	* Web-universe to explore (darkweb!!!)
-	* Play In-Game Games (Game-ception?)
-	* Attack, and team up with other players in multi-player, and connect with friends in the in-game social site (yet to be named)
-	* Explore various in-game Apps/Scripts/Missions, download player-made ones, or create your own.
-	* Take on randomly generated jobs, attack randomly generated systems, and collect information on randomly created NPCs, in a world that expands dynamically as you play.
-	* Take either side of the law, or try you luck at playing both. ;3
-	* Fully Mod-able (through source, or a mod API)
+* Full Multi-Platform Support (Windows/Linux/Mac)
+* Realistic PC Desktop
+* Web-universe to explore (darkweb!!!)
+* Play In-Game Games (Game-ception?)
+* Attack, and team up with other players in multi-player, and connect with friends in the in-game social site (yet to be named)
+* Explore various in-game Apps/Scripts/Missions, download player-made ones, or create your own.
+* Take on randomly generated jobs, attack randomly generated systems, and collect information on randomly created NPCs, in a world that expands dynamically as you play.
+* Take either side of the law, or try your luck at playing both. ;3
+* Fully Mod-able (through source, or a mod API)
 
 
-While we're still a long ways off from the final release (we're currently in pre-alpha!) we do have content already implemented, ready to play:
+While we're still a long way off from the final release (we're currently in pre-alpha!) we do have content already implemented, ready to play:
 
 
-	* Supports Windows Only
-	* Minimal PC Desktop (Looks horrid right now tbh.. but it works.)
-	* (Some) Websites
-	* (Some) Desktop programs, and download-able Apps
-	* Fully functional in-game console
-	* Custom player scripts (fully editable)
-	* (Minimally Implemented) Randomly generated systems to hack, and randomly created NPCs to rob [>:3]
-	* The game will expand Dynamically as you play; Systems/NPCs/Bank-accounts/Emails/Files will be created as you move around the "Internet of things"
-	* Mod-able through Source-Code
+* Supports Windows Only
+* Minimal PC Desktop (Looks horrid right now tbh.. but it works.)
+* (Some) Websites
+* (Some) Desktop programs, and downloadable Apps
+* Fully functional in-game console
+* Custom player scripts (fully editable)
+* (Minimally Implemented) Randomly generated systems to hack, and randomly created NPCs to rob [>:3]
+* The game will expand Dynamically as you play; Systems/NPCs/Bank-accounts/Emails/Files will be created as you move around the "Internet of things"
+* Mod-able through Source-Code
 
 
+![patreon banner](https://orig00.deviantart.net/443c/f/2015/334/4/c/patreon_word_logo_for_light_bg_by_angelasasser-d9imh6a.png "Support development on Patreon!")
+*Don't forget; If you like what you see, and would like to see development continue, **[you can support development on Patreon!](https://www.patreon.com/TheCyaniteProject)***
