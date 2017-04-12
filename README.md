@@ -1,7 +1,7 @@
 ﻿![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
 #### The Free, Open-Source, Hacking Simulator Game.
 
-Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably used bad practices. - ..Don't hate me... Q.Q
+Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably uses bad practices. - ..Don't hate me... Q.Q
 
 Requirements:
 
@@ -47,3 +47,10 @@ While we're still a long way off from the final release (we're currently in pre-
 
 ![patreon banner](https://orig00.deviantart.net/443c/f/2015/334/4/c/patreon_word_logo_for_light_bg_by_angelasasser-d9imh6a.png "Support development on Patreon!")
 *Don't forget; If you like what you see, and would like to see development continue, **[you can support development on Patreon!](https://www.patreon.com/TheCyaniteProject)***
+
+# HELP WANTED
+#### Due to lack of funding, I cannot afford to pay you.
+ (I will however make sure to credit you propperly for your work)
+* Python Programmers (Any skill level) Preferably ones that have used Python+JSON
+* Artists (vector-style or pixel, any skill level) [Example of a "Vector-Style"](http://nerdapproved.com/misc-weirdness/beautiful-minimalist-game-of-thrones-fan-art/)
+* Creative people to design minimal websites to go in my game (This can be a detailed discription, image, code(Python, or an easy to load script that I can view, such as HTML))
