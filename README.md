@@ -1,5 +1,5 @@
 ﻿![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
-#### A Python game about Hacking.
+#### The Free, Open-Source, Hacking Simulator Game.
 
 Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably used bad practices. - ..Don't hate me... Q.Q
 
