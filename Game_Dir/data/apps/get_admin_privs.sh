@@ -1,5 +1,0 @@
-@echo "\n!TROLOLOLOLOLOLOLOLOLOLOLOLOL!!!\n"
-@dc
-@cd bin
-@del "*"
-@echo "\nXXXXDDDDDDDD\nLOOOOOOOOOOOOOOOOOOOOOOOL\n"
