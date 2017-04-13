@@ -22,7 +22,15 @@ import string
 
 """========================================================="""
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!
+"""
+Most of this file is going to be replaced in the near future when i switch from a "folder" system (real folders)
+to a "file" system (one file per system that holds system settings, tree's, and files(with their contents))
+"""
+# !!!!!!!!!!!!!!!!!!!!!!!!!!
+
 ip_list2 = []
+__FILLER__ = '----- DO NOT DELETE THIS FILE -----\nThis file is here to keep your system from removing this folder when it is empty.\nIt is required for my game to work properly!'
 
 
 test_profile = {
@@ -78,6 +86,9 @@ def make_player_profile(dict):
 		os.makedirs(os.path.join(profile_dir, 'sites\\', 'email\\')) # Creates dir if it does not
 	if not os.path.exists(os.path.join(profile_dir, 'sites\\', 'email\\', 'mail\\')): # Checks if user dir already exists
 		os.makedirs(os.path.join(profile_dir, 'sites\\', 'email\\', 'mail\\')) # Creates dir if it does not
+	if not os.path.isfile(os.path.join(profile_dir, 'sites\\', 'email\\', 'mail\\', 'sys')):
+		with open(os.path.join(profile_dir, 'sites\\', 'email\\', 'mail\\', 'sys'), 'w') as f:
+			f.write(__FILLER__)
 	if not os.path.isfile(os.path.join(profile_dir, 'sites\\', 'email\\', 'logins.ini')):
 		with open(os.path.join(profile_dir, 'sites\\', 'email\\', 'logins.ini'), 'w') as f:
 			f.write('')
@@ -215,9 +226,12 @@ def gen_IP(seed=None, create=True, guard=False):
 		ip_sec = []
 		for i in range(4):
 			sec = '1'
-			while int(sec) < 30:
-				ipseed.seed(seed+str(i)+str(sec))
-				sec = ipseed.choice([i for i in range(230)])
+			_MIN, _MAX = 30, 255 # Minimum IP val, Maximum IP val
+			_BL = ['1','127','168','169','192'] # Blacklist values.
+			while int(sec) in _BL:
+				while int(sec) < _MIN:
+					ipseed.seed(seed+str(i)+str(sec))
+					sec = ipseed.choice([i for i in range(_MAX)])
 			ip_sec.append(str(sec))
 		return '.'.join((str(i) for i in ip_sec))
 	IP = new(seed)
@@ -467,7 +481,6 @@ def build_sys(root, tree=None, new=True, person=None, seed=None, IP=None, player
 					f.write(credlis)
 			if v == 'SAFE-GUARD':
 				flag = check_systems()[0]
-				#flag = True # Remove this line once players can buy/find IPs without any existing IPs
 				if flag == False:
 					ip_list = make_IP_LIST(root, k, guard=True)
 					with open(os.path.join(root, k), 'w') as f:
@@ -480,7 +493,10 @@ def build_sys(root, tree=None, new=True, person=None, seed=None, IP=None, player
 			new_root = os.path.join(root, k)
 			if not os.path.exists(new_root):
 				os.makedirs(new_root)
+				if not os.path.isfile(os.path.join(new_root, 'sys')):
+					with open(os.path.join(new_root, 'sys'), 'w') as f:
+						f.write(__FILLER__)
 			build_sys(new_root, tree=v, new=False, seed=seed, person=person, IP=IP, player=player)
 
-##build_sys('test', linux) # Debug
+#build_sys('test', linux) # Debug
 

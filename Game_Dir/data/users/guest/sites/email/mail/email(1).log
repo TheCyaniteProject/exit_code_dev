@@ -6,7 +6,7 @@ Hello newcomer. You can call me Cyn. I don't know why you decided
 to get into this life, nor do I care.
 All I know is that I was told to send you on your way.
 
-163.43.203.191 - If you've got what it takes to lead this life, that's all you'll need.
+1.1.1.1 - If you've got what it takes to lead this life, that's all you'll need.
 I'll contact you if i need anything.
 Don't reply to this address, I don't check it.
 
@@ -15,14 +15,4 @@ have some already. I hear DataKult has some good ones. I attached a link.
 <link=datakult.shop text=[www.DataKult.shop]>
 <link=shhmail.net text=[Send Mail Anonamously with ShhMail.net]>
 </msg>
-
-<msg=f>
-%s
-</msg>
-
-
-<msg=f>
-%s
-</msg>
-
 </log>

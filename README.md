@@ -7,7 +7,7 @@ Requirements:
 
 1. Windows XP/Vista/7/8/10
 2. Python2.7 (we will move to Python3.6 soon) https://www.python.org/downloads/
-3. Python Imaging Library (PIL) `pip install pillow`  (http://www.pythonware.com/products/pil/)
+3. Python Imaging Library (PIL) `pip install pillow` http://www.pythonware.com/products/pil/
 
 Exit.Code() is a game about hacking. The plan is to take the best parts from my favorite games, combined with (of course) my own original ideas, and turn them into something great!
 
