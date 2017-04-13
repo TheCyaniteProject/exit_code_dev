@@ -4,4 +4,4 @@ And is provided by;
 "Allison Marie Bennett", TheCyaniteProject@gmail.com
 ============================================================"""
 
-__VERSION__ = 'ALPHA-1.4' # First number = MAJOR change - Second number = Feature, bugfix, code-edit
+__VERSION__ = 'PRE-ALPHA-1.5' # First number = MAJOR change - Second number = Feature, bugfix, code-edit
