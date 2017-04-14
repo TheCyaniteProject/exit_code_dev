@@ -1,5 +1,11 @@
-from Tkinter import *
-import ttk
+try:
+    from Tkinter import *
+except ModuleNotFoundError:
+    from tkinter import *
+try:
+    import ttk
+except ModuleNotFoundError:
+    from tkinter import ttk
 from subprocess import Popen
 from data.__VERSION__ import __VERSION__
 import os
