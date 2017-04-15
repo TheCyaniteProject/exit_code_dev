@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -13,7 +13,6 @@ Account Controls: Create, Delete, Verify, Alert, ##Lock, ##Unlock
 Widgets: ##Payme, ##Easybits
 ============================================================"""
 
-"""========================= Imports ======================="""
 import data.settings as settings
 import data.mail as mail
 import os

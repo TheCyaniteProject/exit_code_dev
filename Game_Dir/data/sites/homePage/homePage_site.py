@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -31,7 +31,7 @@ def web_site(web_page, go_from):
 	bookmarks = LabelFrame(web_page, bg='white')
 	bookmarks.pack(anchor=N, fill=X, expand=False, side=TOP)
 	Label(bookmarks, text='Bookmarks:', bg='white').pack(anchor=W, side=LEFT)
-	
+
 	# Bookmarks
 	add_bookmark('Email.com', 'www.email.com')
 	add_bookmark('ShhMail.net', 'www.shhmail.net')

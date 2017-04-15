@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -112,7 +112,7 @@ def web_site(web_page):
 			else:
 				free_downl = True
 				price = 'FREE'
-			
+
 			def buyeb_click(name,price,file):
 				def do_buy(buy_frame, name, buy_framem):
 					if wallet.check('easybits', settings.easybits_ac, price) == False:
@@ -133,8 +133,8 @@ def web_site(web_page):
 						Button(buy_frame, text='Done', bg='purple', fg='black', command=buy_framem.destroy).pack(anchor=S, side=RIGHT)
 						return
 					else: check_flag(flag, name, buy_frame, buy_framem)
-						
-						
+
+
 				buy_framem = LabelFrame(product_list, fg='black', bg='purple', height=3000, width=3000)
 				buy_framem.place(anchor=N, relx=.5, rely=0)
 				buy_framem.pack_propagate(0)
@@ -145,7 +145,7 @@ def web_site(web_page):
 				Button(buy_frame, text='Buy', bg='purple', fg='black', command=lambda:do_buy(buy_frame, name, buy_framem)).pack(anchor=S, side=LEFT)
 				Button(buy_frame, text='Cancel', bg='purple', fg='black', command=buy_framem.destroy).pack(anchor=S, side=RIGHT)
 
-				
+
 			def buypm_click(name,price,file):
 				def do_buy(buy_frame, name, buy_framem):
 					if wallet.check('payme', settings.payme_ac, price) == False:
@@ -166,7 +166,7 @@ def web_site(web_page):
 						Button(buy_frame, text='Done', bg='purple', fg='black', command=buy_framem.destroy).pack(anchor=S, side=RIGHT)
 						return
 					else: check_flag(flag, name, buy_frame, buy_framem)
-					
+
 				buy_framem = LabelFrame(product_list, fg='black', bg='purple', height=3000, width=3000)
 				buy_framem.place(anchor=N, relx=.5, rely=0)
 				buy_framem.pack_propagate(0)
@@ -176,7 +176,7 @@ def web_site(web_page):
 				Label(buy_frame, text='Are you sure you want to buy\n%s for $%s?' % (name,price), bg='black', fg='purple').pack(anchor=N, side=TOP)
 				Button(buy_frame, text='Buy', bg='purple', fg='black', command=lambda:do_buy(buy_frame, name, buy_framem)).pack(anchor=S, side=LEFT)
 				Button(buy_frame, text='Cancel', bg='purple', fg='black', command=buy_framem.destroy).pack(anchor=S, side=RIGHT)
-			
+
 			def buyfree_click(name, file):
 				def do_buy(buy_frame, name, buy_framem):
 					flag = apps.getfile(file)
@@ -198,7 +198,7 @@ def web_site(web_page):
 				Label(buy_frame, text='Are you sure you want to download\n%s?' % (name), bg='black', fg='purple').pack(anchor=N, side=TOP)
 				Button(buy_frame, text='Download', bg='purple', fg='black', command=lambda:do_buy(buy_frame, name, buy_framem)).pack(anchor=S, side=LEFT)
 				Button(buy_frame, text='Cancel', bg='purple', fg='black', command=buy_framem.destroy).pack(anchor=S, side=RIGHT)
-			
+
 			def more_click(name,desc,price):
 				buy_framem = LabelFrame(product_list, fg='black', bg='purple', height=3000, width=3000)
 				buy_framem.place(anchor=N, relx=.5, rely=0)
@@ -209,14 +209,14 @@ def web_site(web_page):
 				Label(buy_frame, text=desc, bg='black', fg='purple').pack(anchor=N, side=TOP)
 				Label(buy_frame, text=price, bg='black', fg='purple').pack(anchor=N, side=TOP)
 				Button(buy_frame, text='Close', bg='purple', fg='black', command=buy_framem.destroy).pack(anchor=S, side=RIGHT)
-			
+
 			if line_mode == True:
 				background = 'black'
 				foreground = 'purple'
 			else:
 				background = 'purple'
 				foreground = 'black'
-			
+
 			product_frame = Frame(product_list, bg=background)
 			product_frame.pack(anchor=N, side=TOP, fill=X, expand=False)
 			Label(product_frame, text='%s | %s |' % (file_name,file_summary), bg=background, fg=foreground, font=('Courier', 10)).pack(side=LEFT, expand=False)
@@ -232,6 +232,6 @@ def web_site(web_page):
 			line_mode = False
 		else:
 			line_mode = True
-	
-	
-	
+
+
+

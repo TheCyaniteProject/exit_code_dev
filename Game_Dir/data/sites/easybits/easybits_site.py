@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -71,7 +71,7 @@ def web_site(web_page, go_from):
 	easybits_page = LabelFrame(web_page, fg='gold', bg='black')
 	easybits_page.pack(anchor=W, side=BOTTOM, fill=BOTH, expand=True)
 	Label(web_page, text='easyBits.com - Free Anonamous Banking.', bg='gold', font=(None, 10)).pack(anchor=W, side=LEFT, fill=Y, expand=False)
-	
+
 	def add_easybits_autofill():
 		global autofill_TF
 		autofill_TF = False
@@ -150,7 +150,7 @@ def web_site(web_page, go_from):
 		actions_frame.pack_propagate(0)
 		account_frame = LabelFrame(easybits_page, text='Account')
 		account_frame.pack(anchor=W, side=LEFT, fill=BOTH, expand=True)
-		
+
 		Label(account_frame, text='Account: %s' % (easybits_account), fg='orange', font=(None, 15)).pack(padx=20, pady=10, anchor=NW)
 		amount_label = Label(account_frame, text='Balance: %sB' % (wallet.check('easybits', easybits_account)), fg='orange', font=(None, 15))
 		amount_label.pack(padx=20, pady=10, anchor=NW)
@@ -173,13 +173,13 @@ def web_site(web_page, go_from):
 			ac_frame.pack(padx=5, pady=2, anchor=W, side=TOP, fill=X)
 			ac_entry = Entry(ac_frame)
 			ac_entry.pack(pady=2, fill=X)
-			
+
 			am_frame = LabelFrame(frame, text='Amount')
 			am_frame.pack(padx=5, pady=2, anchor=W, side=LEFT)
 			am_entry = Entry(am_frame, width=10)
 			am_entry.pack(pady=2, fill=X, side=LEFT)
 			Label(am_frame, text='B').pack(pady=2, fill=X, side=RIGHT)
-			
+
 			def send():
 				amount = float(am_entry.get().strip().rstrip())
 				flag = wallet.check('easybits', easybits_account, amount=amount)
@@ -241,7 +241,7 @@ def web_site(web_page, go_from):
 					buy_button.configure(state='normal')
 			ac_button = Button(ac_frame, text='Authorize', command=authorize)
 			ac_button.pack(pady=2, fill=X)
-			
+
 			am_frame = LabelFrame(frame, text='Amount')
 			am_frame.pack(padx=5, pady=2, anchor=W, side=LEFT)
 			am_entry = Entry(am_frame, width=10)
@@ -294,7 +294,7 @@ def web_site(web_page, go_from):
 					sell_button.configure(state='normal')
 			ac_button = Button(ac_frame, text='Authorize', command=authorize)
 			ac_button.pack(pady=2, fill=X)
-			
+
 			am_frame = LabelFrame(frame, text='Amount')
 			am_frame.pack(padx=5, pady=2, anchor=W, side=LEFT)
 			am_entry = Entry(am_frame, width=10)
@@ -327,4 +327,4 @@ def web_site(web_page, go_from):
 		Button(actions_frame, text='Send Bits', command=send_easybits).pack(padx=20, side=LEFT)
 		Button(actions_frame, text='Buy Bits', command=buy_easybits).pack(padx=20, side=LEFT)
 		Button(actions_frame, text='Sell Bits', command=sell_easybits).pack(padx=20, side=LEFT)
-		
+
