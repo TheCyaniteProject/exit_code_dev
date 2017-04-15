@@ -11,6 +11,7 @@ from data.__VERSION__ import __VERSION__
 import os
 import sys
 import configparser
+import importlib
 # import ctypes
 # import subprocess
 
@@ -106,7 +107,7 @@ def main():
         po = Popen([sys.executable, '-u', script_path, '--user', profile.get()], shell=True)
 
     def new_profile_gui():
-        reload(new_player_ui)
+        importlib.reload(new_player_ui)
         new_player_ui.main(root, check_profiles)
 
     def user_settings():

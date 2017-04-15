@@ -75,7 +75,7 @@ def main(main_frame, check_profiles):
 
     def randomize1():
         game_seed.delete(0, END)
-        game_seed.insert(0, ''.join([(random.choice(string.digits + string.letters + '._-')) for i in range(24)]))
+        game_seed.insert(0, ''.join([(random.choice(string.digits + string.ascii_letters + '._-')) for i in range(24)]))
     Button(frame, text='Randomize', command=randomize1).pack(padx=1, side=RIGHT)
     frame = LabelFrame(entries, text='IP Address')
     frame.pack(padx=10, pady=3, fill=X, side=TOP)
@@ -105,7 +105,7 @@ def main(main_frame, check_profiles):
     easybits_ac.insert(0, username.get())
     Label(frame, text='_XXXXXXXX').pack(padx=1, side=RIGHT)
 
-    game_seed.insert(0, ''.join((random.choice(string.digits + string.letters) for i in range(24))))
+    game_seed.insert(0, ''.join((random.choice(string.digits + string.ascii_letters) for i in range(24))))
     player_ip.insert(0, sys_make.gen_IP(create=False))
 
     # Menu Area
@@ -133,7 +133,7 @@ def main(main_frame, check_profiles):
                         pad_warn('You cannot use spaces', color='pink')
                         entrybox.configure(bg='pink')
                         return
-                    elif i not in string.digits + string.letters + '_.-':
+                    elif i not in string.digits + string.ascii_letters + '_.-':
                         pad_warn('You can only use Numbers, Lette rs, and:  .  _  -', color='pink')
                         entrybox.configure(bg='pink')
                         return
@@ -190,9 +190,9 @@ def main(main_frame, check_profiles):
             profile['email_ac'] = email_ac.get().strip().rstrip() + '@email.com'
             seeded = random.Random()
             seeded.seed(profile['seed'] + 'payme')
-            profile['payme_ac'] = payme_ac.get().strip().rstrip() + '_' + ''.join([(seeded.choice(string.digits + string.letters + '_')) for i in range(8)])
+            profile['payme_ac'] = payme_ac.get().strip().rstrip() + '_' + ''.join([(seeded.choice(string.digits + string.ascii_letters + '_')) for i in range(8)])
             seeded.seed(profile['seed'] + 'easybits')
-            profile['easybits_ac'] = easybits_ac.get().strip().rstrip() + '_' + ''.join([(seeded.choice(string.digits + string.letters + '_')) for i in range(8)])
+            profile['easybits_ac'] = easybits_ac.get().strip().rstrip() + '_' + ''.join([(seeded.choice(string.digits + string.ascii_letters + '_')) for i in range(8)])
             profile['player_ip'] = player_ip.get().strip().rstrip()
         except Exception as err:
             pad_warn('Woah! That was unexpected! Error: %s' % err, color='pink')

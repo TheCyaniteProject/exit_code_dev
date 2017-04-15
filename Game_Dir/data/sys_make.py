@@ -241,7 +241,7 @@ def gen_IP(seed=None, create=True, guard=False):
     # Setting up seeding
     ipseed = random.Random()
     if seed is None:
-        char = string.digits + string.letters + '_'
+        char = string.digits + string.ascii_letters + '_'
         seed = ''.join([random.choice(char) for i in range(16)])
     # Creates a random 'IP' within the following guide: Four segments of int()-able(numbers) between 30-230 sepperated by a dot(.)
 
