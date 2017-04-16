@@ -22,6 +22,7 @@ import random
 import string
 # import os
 import data.sys_make as sys_make
+import importlib
 
 """========================================================="""
 
@@ -197,7 +198,7 @@ def main(main_frame, check_profiles):
         except Exception as err:
             pad_warn('Woah! That was unexpected! Error: %s' % err, color='pink')
             return
-        reload(sys_make)
+        importlib.reload(sys_make)
         sys_make.make_player_profile(profile)
         pad_warn('Profile was created', color='white')
         check_profiles()

@@ -21,6 +21,8 @@ import data.new_player_ui as new_player_ui
 import traceback
 import logging
 from time import strftime
+with open('pid', 'w') as f:
+    f.write(str(os.getpid()))
 
 # subprocess.Popen('cls', shell=True)
 os.system('cls')

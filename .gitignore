@@ -5,3 +5,4 @@ logs/*
 temp.py
 debug.py
 pid
+launcher.log

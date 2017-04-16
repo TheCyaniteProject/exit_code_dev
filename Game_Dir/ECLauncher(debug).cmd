@@ -1,7 +1,5 @@
 @echo off
 :loop
-echo Press any key to start . . .
-pause >nul
-cls
+pause
 python -u ECLauncher.py
 goto loop

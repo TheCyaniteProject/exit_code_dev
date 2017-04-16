@@ -18,6 +18,7 @@ import data.mail as mail
 from data.gen import *
 import random
 import string
+import importlib
 # Most of this file is going to be replaced in the near future when i switch from a "folder" system (real folders)
 
 ip_list2 = []
@@ -120,7 +121,7 @@ def make_player_profile(dict):
     <link=shhmail.net text=[Send Mail Anonamously with ShhMail.net]>
     '''.format(to='to', ip='ip')
 
-    reload(mail)
+    importlib.reload(mail)
     var = mail.send(mail.dict(first_email))
     if not var:
         raise Exception('mailError')
@@ -472,7 +473,7 @@ def build_sys(root, tree=None, new=True, person=None, seed=None, IP=None, player
         else:
             tree = seeded.choice(system_list)  # 'system_list' is a list of allowed OS-dictionary-trees imported from data.gen
     """ Here starts what i don't know much about """
-    for k, v in tree.iteritems():
+    for k, v in tree.items():
         # Filename
         if '/' in k:
             seeded.seed(seed + root + k)
