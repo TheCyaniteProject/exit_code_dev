@@ -251,7 +251,7 @@ def gen_IP(seed=None, create=True, guard=False):
             sec = '1'
             _MIN, _MAX = 30, 255  # Minimum IP val, Maximum IP val
             _BL = ['1', '127', '168', '169', '192']  # Blacklist values.
-            while int(sec) in _BL:
+            while str(sec) in _BL:
                 while int(sec) < _MIN:
                     ipseed.seed(seed + str(i) + str(sec))
                     sec = ipseed.choice([i for i in range(_MAX)])
