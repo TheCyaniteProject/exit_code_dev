@@ -25,6 +25,11 @@ from time import strftime
 # subprocess.Popen('cls', shell=True)
 os.system('cls')
 
+try:
+    os.mkdir('logs')
+except OSError:
+    pass
+
 
 def get_time():
     return strftime('%Y-%m-%d %H:%M.%S')
