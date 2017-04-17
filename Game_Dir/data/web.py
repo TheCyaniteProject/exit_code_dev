@@ -9,7 +9,7 @@ And is provided by;
 Game Web & Browser
 ============================================================
 """
-import tkinter_ui
+from . import tkinter_ui
 import os
 import data.settings as settings
 import data.mail as mail

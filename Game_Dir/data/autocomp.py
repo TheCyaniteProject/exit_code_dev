@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """============================================================
-Tkinter AutocompleteEntry
+tkinter AutocompleteEntry
 tkentrycomplete.py
 
 A tkinter widget that features autocompletion.
@@ -11,22 +11,19 @@ Created by Mitja Martini on 2008-11-29.
 Usage:
 entry = AutocompleteEntry(root)
 entry.set_completion_list(['test','list'])
-
 ============================================================"""
-
-"""========================= Imports ======================="""
-import sys
-import os
-import Tkinter
-"""========================================================="""
+# import sys
+# import os
+import tkinter
 
 __version__ = "1.0"
 
-tkinter_umlauts=['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
+tkinter_umlauts = ['odiaeresis', 'adiaeresis', 'udiaeresis', 'Odiaeresis', 'Adiaeresis', 'Udiaeresis', 'ssharp']
 
-class AutocompleteEntry(Tkinter.Entry):
+
+class AutocompleteEntry(tkinter.Entry):
     """
-    Subclass of Tkinter.Entry that features autocompletion.
+    Subclass of tkinter.Entry that features autocompletion.
 
     To enable autocompletion use set_completion_list(list) to define
     a list of possible strings to hit.
@@ -41,9 +38,9 @@ class AutocompleteEntry(Tkinter.Entry):
 
     def autocomplete(self, delta=0):
             """autocomplete the Entry, delta may be 0/1/-1 to cycle through possible hits"""
-            if delta: # need to delete selection otherwise we would fix the current position
-                    self.delete(self.position, Tkinter.END)
-            else: # set position to end so selection starts where textentry ended
+            if delta:  # need to delete selection otherwise we would fix the current position
+                    self.delete(self.position, tkinter.END)
+            else:  # set position to end so selection starts where textentry ended
                     self.position = len(self.get())
             # collect hits
             _hits = []
@@ -53,33 +50,33 @@ class AutocompleteEntry(Tkinter.Entry):
             # if we have a new hit list, keep this in mind
             if _hits != self._hits:
                     self._hit_index = 0
-                    self._hits=_hits
+                    self._hits = _hits
             # only allow cycling if we are in a known hit list
             if _hits == self._hits and self._hits:
                     self._hit_index = (self._hit_index + delta) % len(self._hits)
             # now finally perform the auto completion
             if self._hits:
-                    self.delete(0,Tkinter.END)
-                    self.insert(0,self._hits[self._hit_index])
-                    self.select_range(self.position,Tkinter.END)
+                    self.delete(0, tkinter.END)
+                    self.insert(0, self._hits[self._hit_index])
+                    self.select_range(self.position, tkinter.END)
 
     def handle_keyrelease(self, event):
             """event handler for the keyrelease event on this widget"""
             """if event.keysym == "BackSpace":
-                    self.delete(self.index(Tkinter.INSERT), Tkinter.END)
-                    self.position = self.index(Tkinter.END)"""
+                    self.delete(self.index(tkinter.INSERT), tkinter.END)
+                    self.position = self.index(tkinter.END)"""
             """if event.keysym == "Left":
-                    if self.position < self.index(Tkinter.END): # delete the selection
-                            self.delete(self.position, Tkinter.END)
+                    if self.position < self.index(tkinter.END): # delete the selection
+                            self.delete(self.position, tkinter.END)
                     else:
                             self.position = self.position-1 # delete one character
-                            self.delete(self.position, Tkinter.END)"""
+                            self.delete(self.position, tkinter.END)"""
             """if event.keysym == "Right":
-                    self.position = self.index(Tkinter.END) # go to end (no selection)"""
+                    self.position = self.index(tkinter.END) # go to end (no selection)"""
             if event.keysym == "Down":
-                    self.autocomplete(1) # cycle to next hit
+                    self.autocomplete(1)  # cycle to next hit
             if event.keysym == "Up":
-                    self.autocomplete(-1) # cycle to previous hit
+                    self.autocomplete(-1)  # cycle to previous hit
             # perform normal autocomplete if event is a single key or an umlaut
             if len(event.keysym) == 1 or event.keysym in tkinter_umlauts:
                     self.autocomplete()

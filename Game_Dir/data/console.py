@@ -19,8 +19,8 @@ import data.apps as apps
 import data.wallet as wallet
 import data.sys_make as sys_make
 from tkinter import *
-import tkinter_ui
-import StringIO
+from . import tkinter_ui
+from io import StringIO
 import argparse
 import subprocess
 
