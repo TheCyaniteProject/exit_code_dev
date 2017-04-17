@@ -19,6 +19,7 @@ import subprocess
 from tkinter import *
 from tkinter import ttk
 from data.autocomp import *
+import importlib
 # UI Settings
 root = Tk()
 root.title(settings.title)
@@ -179,7 +180,7 @@ def disable_2():
         browser_app.set('Browser')
         disable_2V = True
     else:
-        reload(web)
+        importlib.reload(web)
         applications.tab(2, state='normal')
         applications.select(2)
         browser_app.set('Browser [X]')
