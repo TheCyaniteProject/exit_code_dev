@@ -430,9 +430,9 @@ def get_dir(command=False):
     dir_call = subprocess.check_output(command, shell=True)
     # Stripping
     for line in dir_call.splitlines():
-        if 'AM' in line:
+        if b'AM' in line:  # The b' prefix converts the string to a byte string which avoids a TypeError
             dir_tree = dir_tree + line.split('AM')[1] + '\n'
-        elif 'PM' in line:
+        elif b'PM' in line:
             dir_tree = dir_tree + line.split('PM')[1] + '\n'
     # Sorting (Dirs first):
     for line in dir_tree.splitlines():

@@ -14,6 +14,7 @@ import os
 import data.settings as settings
 import data.mail as mail
 from tkinter import *
+import importlib
 
 # Web Pages For Browser
 global sitelocker_ver
@@ -48,7 +49,7 @@ class WebPages(object):
         sitelocker_ver = False
         riddleme_mode = False
         import data.sites.errorPage.errorPage_site as errorPage_site
-        reload(errorPage_site)
+        importlib.reload(errorPage_site)
         errorPage_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
 
     def browserHome(self):
@@ -59,7 +60,7 @@ class WebPages(object):
         sitelocker_ver = False
         riddleme_mode = False
         import data.sites.homePage.homePage_site as homePage_site
-        reload(homePage_site)
+        importlib.reload(homePage_site)
         homePage_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
 
     def page_whatsmyip(self):
@@ -71,7 +72,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('http://www.whatsmyip.com')
         import data.sites.whatsmyip.whatsmyip_site as whatsmyip_site
-        reload(whatsmyip_site)
+        importlib.reload(whatsmyip_site)
         whatsmyip_site.web_site(tkinter_ui.web_page)
 
     def page_sitelocker(self):
@@ -83,7 +84,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('http://www.sitelocker.org')
         import data.sites.sitelocker.sitelocker_site as sitelocker_site
-        reload(sitelocker_site)
+        importlib.reload(sitelocker_site)
         sitelocker_site.web_site(tkinter_ui.web_page)
 
     def page_riddleme(self):
@@ -95,7 +96,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('http://www.riddleme.org')
         import data.sites.riddleme.riddleme_site as riddleme_site
-        reload(riddleme_site)
+        importlib.reload(riddleme_site)
         riddleme_site.web_site(tkinter_ui.web_page)
 
     def page_datakult(self):
@@ -107,7 +108,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('https://www.datakult.shop')
         import data.sites.datakult.datakult_site as datakult_site
-        reload(datakult_site)
+        importlib.reload(datakult_site)
         datakult_site.web_site(tkinter_ui.web_page)
 
     def page_pcgo(self):
@@ -119,7 +120,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('https://www.pcgo.shop')
         import data.sites.pcgo.pcgo_site as pcgo_site
-        reload(pcgo_site)
+        importlib.reload(pcgo_site)
         pcgo_site.web_site(tkinter_ui.web_page)
 
     def page_payme(self):
@@ -131,7 +132,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('https://www.payme.net')
         import data.sites.payme.payme_site as payme_site
-        reload(payme_site)
+        importlib.reload(payme_site)
         payme_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
         return
         '''
@@ -151,7 +152,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('https://www.easybits.com')
         import data.sites.easybits.easybits_site as easybits_site
-        reload(easybits_site)
+        importlib.reload(easybits_site)
         easybits_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
         return
         '''
@@ -171,7 +172,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('http://www.shhmail.net')
         import data.sites.email.email_site as email_site
-        reload(email_site)
+        importlib.reload(email_site)
         email_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
         hackable = [email_site.email_user, email_site.hack_in]
         if email_site.sitelocker is not None:
@@ -189,7 +190,7 @@ class WebPages(object):
         riddleme_mode = False
         tkinter_ui.set_url('http://www.email.com')
         import data.sites.email.email_site as email_site
-        reload(email_site)
+        importlib.reload(email_site)
         email_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
         hackable = [email_site.email_user, email_site.hack_in]
         if email_site.sitelocker is not None:
