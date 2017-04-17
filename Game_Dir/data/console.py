@@ -830,7 +830,7 @@ def run(command):
     if print_out:
         print('\n%s\nExecuting Player Command @ "%s"' % (settings.get_time(), command))
     command = command.replace('\\', '\\\\')
-    with stdout_redirect(StringIO.StringIO()) as new_stdout:
+    with stdout_redirect(StringIO()) as new_stdout:
         # Parses the passed 'args'
         if not command.strip() == '':
             if command.startswith('@'):
