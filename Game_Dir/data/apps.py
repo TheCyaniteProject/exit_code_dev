@@ -11,10 +11,10 @@ Apps, and App Framework
 ============================================================
 """
 import os
-import console
-import settings
-import tkinter_ui
-import web
+from . import console
+import data.settings as settings
+from . import tkinter_ui
+import data.web as web
 from shutil import copyfile
 
 
