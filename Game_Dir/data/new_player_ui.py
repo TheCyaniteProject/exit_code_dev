@@ -10,14 +10,8 @@ And is provided by;
 New Profile Creation
 ============================================================
 """
-try:
-    from Tkinter import *
-except ModuleNotFoundError:
-    from tkinter import *
-try:
-    import ttk
-except ModuleNotFoundError:
-    from tkinter import ttk
+from tkinter import *
+from tkinter import ttk
 import random
 import string
 # import os

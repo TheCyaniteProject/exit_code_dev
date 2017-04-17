@@ -16,14 +16,8 @@ import data.console as console
 import data.web as web
 import os
 import subprocess
-try:
-    from Tkinter import *
-except ModuleNotFoundError:
-    from tkinter import *
-try:
-    import ttk
-except ModuleNotFoundError:
-    from tkinter import ttk
+from tkinter import *
+from tkinter import ttk
 from data.autocomp import *
 # UI Settings
 root = Tk()

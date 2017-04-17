@@ -16,10 +16,7 @@ import tkinter_ui
 import os
 import data.settings as settings
 import data.mail as mail
-try:
-    from Tkinter import *
-except ModuleNotFoundError:
-    from tkinter import *
+from tkinter import *
 """========================================================="""
 
 """ Web Pages For Browser """

@@ -18,7 +18,7 @@ import data.settings as settings
 import data.apps as apps
 import data.wallet as wallet
 import data.sys_make as sys_make
-from Tkinter import *
+from tkinter import *
 import tkinter_ui
 import StringIO
 import argparse

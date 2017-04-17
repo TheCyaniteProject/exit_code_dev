@@ -16,10 +16,7 @@ Widgets: ##Payme, ##Easybits
 import data.settings as settings
 import data.mail as mail
 import os
-try:
-    from Tkinter import *
-except ModuleNotFoundError:
-    from tkinter import *
+from tkinter import *
 # Money Conversion
 
 
