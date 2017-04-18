@@ -1,7 +1,8 @@
 ﻿![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
 #### The Free, Open-Source, Hacking Simulator Game.
 
-Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably uses bad practices. - ..Don't hate me... Q.Q
+Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably uses bad practices.
+Altough all the code coming from SitiSchu is linted with flake8 ignoring the following Errors: D*, E501 and E116
 
 Requirements:
 
