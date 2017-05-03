@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -36,7 +36,7 @@ class ReCanvas(Canvas):
 		self.bind('<Configure>', self.on_resize)
 		self.height = self.winfo_reqheight()
 		self.width = self.winfo_reqwidth()
-	
+
 	def on_resize(self, event):
 		# determine ratio of old width/height to new width/height
 		hscale = float(event.height)/self.height
@@ -47,7 +47,7 @@ class ReCanvas(Canvas):
 		self.config(height=self.height, width=self.width)
 		#bresize all the objects tagged with 'all'
 		self.scale('all', 0,0, wscale,hscale)
-	
+
 def check_email():
 	retval = {}
 	for file in os.listdir('%s%s\\sites\\email\\mail\\' % (settings.user_dir,settings.username)):
@@ -66,10 +66,10 @@ def check_email():
 					chat_log2 = chat_log2.split('</msg>',1)[1]
 			log['chat'] = chat
 			retval[file] = log
-			
+
 			log = {}
 			chat = []
-			
+
 			log['from'] = f.split('<to>',1)[1].split('</to>',1)[0]
 			log['to'] = f.split('<from>',1)[1].split('</from>',1)[0]
 			chat_log = f.split('<log>',1)[1].split('</log>',1)[0]
@@ -81,7 +81,7 @@ def check_email():
 			log['chat'] = chat
 			retval[file+'_REV'] = log
 	return retval
-			
+
 def web_site(web_page, go_from):
 	global sitelocker
 	global riddleme
@@ -225,34 +225,34 @@ def web_site(web_page, go_from):
 		inbox_library.create_window((0,0), window=inbox_library_frame, anchor=N)
 		inbox_library_frame.bind('<Configure>', canvas_fig)
 		inbox_library.addtag_all('all')
-		
+
 		def chat_fig(event):
 			chat.configure(scrollregion=chat.bbox('all'))
-			
+
 		chatbox = LabelFrame(email_page, bg='white')
 		chatbox.pack(side=LEFT, fill=BOTH, expand=True)
 		chatbox.pack_propagate(0)
-		
+
 		chat_main = Frame(chatbox, bg='white')
 		chat_main.pack(side=LEFT, fill=BOTH, expand=True)
 		chat_main.pack_propagate(0)
-		
+
 		test = Frame(chatbox, bg='white')
 		test.pack(side=BOTTOM, fill=BOTH)
 		Text(test, height=3, width=20, wrap=WORD).pack(side=RIGHT, fill=X, expand=True)
 		Button(test, relief=FLAT, text='Send', bg='white').pack(side=LEFT)
-		
+
 		chat = ReCanvas(chatbox, bg='white')
 		chat_scroll = Scrollbar(chatbox, orient='vertical', command=chat.yview)
 		chat.pack(side=LEFT, fill=BOTH, expand=True)
 		chat_scroll.pack(side=LEFT, fill=Y)
 		chat.configure(yscrollcommand=chat_scroll.set)
-		
+
 		chat_frame = Frame(chat, bg='white')
 		chat.create_window((0,0), window=chat_frame, anchor=N)
 		chat_frame.bind('<Configure>', chat_fig)
 		chat.addtag_all('all')
-		
+
 		emails = check_email()
 		for file in emails:
 			if emails[file]['to'].lower().strip().rstrip() == email_account.lower().strip().rstrip():

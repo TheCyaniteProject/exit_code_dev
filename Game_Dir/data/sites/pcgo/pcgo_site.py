@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -21,4 +21,4 @@ def web_site(web_page):
 		widget.destroy()
 	Label(web_page, text='PCGo.shop - Buy quality computer parts online\nPCGo.shop is not yet implimented.', bg='white', font=(None, 10)).pack(expand=True)
 	Label(web_page, text='PCGo will be a website for upgrading your computer, allowing for faster, and more powerful hacks.', bg='white', font=(None, 10)).pack(expand=True)
-	
+

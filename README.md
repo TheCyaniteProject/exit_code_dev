@@ -1,15 +1,17 @@
 ﻿![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
 #### The Free, Open-Source, Hacking Simulator Game.
 
-Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably uses bad practices. - ..Don't hate me... Q.Q
+Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably uses bad practices.
+Altough all the code coming from SitiSchu is linted with flake8 ignoring the following Errors: D*, E501 and E116
 
 Requirements:
 
 1. Windows XP/Vista/7/8/10
 2. Python2.7 (we will move to Python3.6 soon) https://www.python.org/downloads/
 3. Python Imaging Library (PIL) `pip install pillow` http://www.pythonware.com/products/pil/
+4. Tkinter
 
-Exit.Code() is a game about hacking. The plan is to take the best parts from my favorite games, combined with (of course) my own original ideas, and turn them into something great!
+Exit.Code() is a game about hacking. The plan is to take the best parts from my favourite games, combined with (of course) my own original ideas, and turn them into something great!
 
 Here is a brief overview of what's to come, and what EC has RIGHT NOW:
 
@@ -22,7 +24,7 @@ In the end, Exit.Code() will be, by all means, a computer/desktop simulator. The
 
 * Full Multi-Platform Support (Windows/Linux/Mac)
 * Realistic PC Desktop
-* Web-universe to explore (darkweb!!!)
+* Web-universe to explore (dark web!!!)
 * Play In-Game Games (Game-ception?)
 * Attack, and team up with other players in multi-player, and connect with friends in the in-game social site (yet to be named)
 * Explore various in-game Apps/Scripts/Missions, download player-made ones, or create your own.
@@ -50,7 +52,7 @@ While we're still a long way off from the final release (we're currently in pre-
 
 # HELP WANTED
 #### Due to lack of funding, I cannot afford to pay you.
- (I will however make sure to credit you propperly for your work)
+ (I will, however, make sure to credit you properly for your work)
 * Python Programmers (Any skill level) Preferably ones that have used Python+JSON
 * Artists (vector-style or pixel, any skill level) [Example of a "Vector-Style"](http://nerdapproved.com/misc-weirdness/beautiful-minimalist-game-of-thrones-fan-art/)
-* Creative people to design minimal websites to go in my game (This can be a detailed discription, image, code(Python, or an easy to load script that I can view, such as HTML))
+* Creative people to design minimal websites to go in my game (This can be a detailed description, image, code(Python, or an easy to load script that I can view, such as HTML))

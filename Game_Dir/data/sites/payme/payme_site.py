@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """============================================================
@@ -80,7 +80,7 @@ def web_site(web_page, go_from):
 	payme_page = LabelFrame(web_page)
 	payme_page.pack(anchor=W, side=BOTTOM, fill=BOTH, expand=True)
 	Label(web_page, text='Payme.net - Get Paid.', bg='green', font=(None, 10)).pack(anchor=W, side=LEFT, fill=Y, expand=False)
-	
+
 	def add_payme_autofill():
 		global autofill_TF
 		autofill_TF = False
@@ -180,7 +180,7 @@ def web_site(web_page, go_from):
 			ac_frame.pack(padx=5, pady=2, anchor=W, side=TOP, fill=X)
 			ac_entry = Entry(ac_frame)
 			ac_entry.pack(pady=2, fill=X)
-			
+
 			am_frame = LabelFrame(frame, text='Amount')
 			am_frame.pack(padx=5, pady=2, anchor=W, side=LEFT)
 			am_entry = Entry(am_frame, width=10)
@@ -206,9 +206,9 @@ def web_site(web_page, go_from):
 			Button(frame, text='Cancel', command=close).pack(padx=5, pady=2, anchor=W, side=RIGHT)
 			Button(frame, text='Send', command=send).pack(padx=5, pady=2, anchor=W, side=RIGHT)
 		Button(actions_frame, text='Send Currency', command=send_payme).pack(padx=20, side=LEFT)
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
