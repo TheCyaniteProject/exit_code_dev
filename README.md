@@ -11,6 +11,16 @@ Requirements:
 3. Python Imaging Library (PIL) `pip install pillow` http://www.pythonware.com/products/pil/
 4. Tkinter
 
+## How To Contribute
+
+* Download the latest version of [Anaconda](https://www.continuum.io/downloads) Python 3.6
+* Fork this repository
+* git clone your repository
+
+To play the game start *ECLauncher.py*
+
+## About
+
 Exit.Code() is a game about hacking. The plan is to take the best parts from my favourite games, combined with (of course) my own original ideas, and turn them into something great!
 
 Here is a brief overview of what's to come, and what EC has RIGHT NOW:
@@ -57,10 +67,4 @@ While we're still a long way off from the final release (we're currently in pre-
 * Artists (vector-style or pixel, any skill level) [Example of a "Vector-Style"](http://nerdapproved.com/misc-weirdness/beautiful-minimalist-game-of-thrones-fan-art/)
 * Creative people to design minimal websites to go in my game (This can be a detailed description, image, code(Python, or an easy to load script that I can view, such as HTML))
 
-## How To Contribute
 
-* Download the latest version of [Anaconda](https://www.continuum.io/downloads) Python 3.6
-* Fork this repository
-* git clone your repository
-
-To play the game start *ECLauncher.py*
