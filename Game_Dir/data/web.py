@@ -9,12 +9,12 @@ And is provided by;
 Game Web & Browser
 ============================================================
 """
-from . import tkinter_ui
-import os
-import data.settings as settings
-import data.mail as mail
-from tkinter import *
 import importlib
+from tkinter import *
+
+import data.mail as mail
+import data.settings as settings
+from . import tkinter_ui
 
 # Web Pages For Browser
 global sitelocker_ver
@@ -26,7 +26,6 @@ riddleme_mode = False
 
 
 class WebPages(object):
-
     # Website URL Links
     webMap = {
         'home': 'browserHome',
@@ -135,13 +134,13 @@ class WebPages(object):
         importlib.reload(payme_site)
         payme_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
         return
-        '''
-        hackable = [email_site.email_user, email_site.hack_in]
-        if not email_site.sitelocker == None:
-            sitelocker_ver = email_site.sitelocker
-        if not email_site.riddleme == None:
-            if not email_site.riddleme.lower() == 'false':
-                riddleme_mode = True'''
+
+        # hackable = [email_site.email_user, email_site.hack_in]
+        # if not email_site.sitelocker == None:
+        #     sitelocker_ver = email_site.sitelocker
+        # if not email_site.riddleme == None:
+        #     if not email_site.riddleme.lower() == 'false':
+        #         riddleme_mode = True
 
     def page_easybits(self):
         global sitelocker_ver
@@ -155,13 +154,12 @@ class WebPages(object):
         importlib.reload(easybits_site)
         easybits_site.web_site(tkinter_ui.web_page, tkinter_ui.go_from)
         return
-        '''
-        hackable = [email_site.email_user, email_site.hack_in]
-        if not email_site.sitelocker == None:
-            sitelocker_ver = email_site.sitelocker
-        if not email_site.riddleme == None:
-            if not email_site.riddleme.lower() == 'false':
-                riddleme_mode = True'''
+        # hackable = [email_site.email_user, email_site.hack_in]
+        # if not email_site.sitelocker == None:
+        #     sitelocker_ver = email_site.sitelocker
+        # if not email_site.riddleme == None:
+        #     if not email_site.riddleme.lower() == 'false':
+        #         riddleme_mode = True
 
     def page_shmail(self):
         global sitelocker_ver
@@ -201,7 +199,6 @@ class WebPages(object):
 
 
 class TempPage(object):
-
     webMap = {
         # 'easybits.com': 'link_easybits',
         'payme.net': 'link_payme',
@@ -214,7 +211,8 @@ class TempPage(object):
             if i not in link:
                 tkinter_ui.go_from('https://www.payme.net')
                 return
-        link = [link.split('auth=', 1)[1].split('-', 1)[0], link.split('acc=', 1)[1].split('-', 1)[0], link.split('ip=', 1)[1]]
+        link = [link.split('auth=', 1)[1].split('-', 1)[0], link.split('acc=', 1)[1].split('-', 1)[0],
+                link.split('ip=', 1)[1]]
         tkinter_ui.set_url('https://www.payme.net/auth=?grant-%s' % link[2])
         file_dir = '%s%s\\wallets\\payme\\%s' % (settings.user_dir, settings.username, link[1])
         with open(file_dir + '.whitelist', 'r') as f:
@@ -243,9 +241,9 @@ class TempPage(object):
         tkinter_ui.set_url('https://www.payme.net/auth=?grant-%s' % link[2])
 
     def go(self, url):
-        url = url.replace('http://', '').replace('https://', '').replace('www.', '').split('/',1)
+        url = url.replace('http://', '').replace('https://', '').replace('www.', '').split('/', 1)
         if url[0] in TempPage().webMap:
-            eval('self.%s(\'%s\')' % (TempPage().webMap[url[0]],url[1]))
+            eval('self.%s(\'%s\')' % (TempPage().webMap[url[0]], url[1]))
 
 
 def web_hack(version=1.0):
@@ -261,6 +259,7 @@ def web_hack(version=1.0):
     def hack_after():
         tkinter_ui.con_post('" *hacker voice* we\'re in "')
         hackable[1]()
+
     wait_time = 20000.0
     wait_time = wait_time / float(version)
     ETA = (wait_time / 1000.0)
@@ -317,6 +316,7 @@ def riddleme(disable=False, mode=None):
             riddleme_mode = True
             ''' Add code here to re-enable Webpage'''
             riddleframe.destroy()
+
         Button(riddleframe, text='I am not a robot! ◄[▫⌂▫]►', fg='blue', command=on_click).pack()
 
 

@@ -8,3 +8,6 @@ pid
 launcher.log
 game.log
 *.zip
+Game_Dir/.idea
+Game_Dir/data/config.ini
+*.ini

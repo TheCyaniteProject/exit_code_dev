@@ -13,14 +13,14 @@ This File is for the 'whatsmyip.com' website
 
 """========================= Imports ======================="""
 from tkinter import *
-from tkinter import ttk
-import data.settings as settings
+
 """========================================================="""
 
+
 def web_site(web_page):
-	for widget in web_page.winfo_children():
-		widget.destroy()
-	Label(web_page, text='''RiddleMe.org - Protect yourself from hackers and spammers\nwith the added security of RiddleMe: WebCapcha.
+    for widget in web_page.winfo_children():
+        widget.destroy()
+    Label(web_page, text='''RiddleMe.org - Protect yourself from hackers and spammers\nwith the added security of RiddleMe: WebCapcha.
 \nSometimes Anti-Hack Suites are not enough to keep out malicious abusers.\n\nWith RiddleMe,\t\t\t\t\t\t
 You can safely block out malicious scripts and automations with a single click.
 \nRiddleMe.org is not yet implimented.''', bg='white', font=(None, 10)).pack(expand=True)

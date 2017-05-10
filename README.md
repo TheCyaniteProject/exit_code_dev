@@ -1,4 +1,4 @@
-﻿![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
+![Exit_Code banner](https://preview.ibb.co/nNxv85/EC_LOGO_TRANS.png "Exit_Code logo transparent")
 #### The Free, Open-Source, Hacking Simulator Game.
 
 Source Disclaimer: I am completely self-taught. My code is messy, unoptimized, under-commented, and probably uses bad practices.
@@ -10,6 +10,16 @@ Requirements:
 2. Python2.7 (we will move to Python3.6 soon) https://www.python.org/downloads/
 3. Python Imaging Library (PIL) `pip install pillow` http://www.pythonware.com/products/pil/
 4. Tkinter
+
+## How To Contribute
+
+* Download the latest version of [Anaconda](https://www.continuum.io/downloads) Python 3.6
+* Fork this repository
+* git clone your repository
+
+To play the game start *ECLauncher.py*
+
+## About
 
 Exit.Code() is a game about hacking. The plan is to take the best parts from my favourite games, combined with (of course) my own original ideas, and turn them into something great!
 
@@ -56,3 +66,5 @@ While we're still a long way off from the final release (we're currently in pre-
 * Python Programmers (Any skill level) Preferably ones that have used Python+JSON
 * Artists (vector-style or pixel, any skill level) [Example of a "Vector-Style"](http://nerdapproved.com/misc-weirdness/beautiful-minimalist-game-of-thrones-fan-art/)
 * Creative people to design minimal websites to go in my game (This can be a detailed description, image, code(Python, or an easy to load script that I can view, such as HTML))
+
+

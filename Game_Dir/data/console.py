@@ -431,9 +431,9 @@ def get_dir(command=False):
     # Stripping
     for line in dir_call.splitlines():
         if b'AM' in line:  # The b' prefix converts the string to a byte string which avoids a TypeError
-            dir_tree = dir_tree + line.split('AM')[1] + '\n'
+            dir_tree = dir_tree + 'AM' + '\n'
         elif b'PM' in line:
-            dir_tree = dir_tree + line.split('PM')[1] + '\n'
+            dir_tree = dir_tree + 'PM' + '\n'
     # Sorting (Dirs first):
     for line in dir_tree.splitlines():
         if '<DIR>' in line:
