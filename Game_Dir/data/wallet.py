@@ -12,7 +12,6 @@ Account Controls: Create, Delete, Verify, Alert, ##Lock, ##Unlock
 Widgets: ##Payme, ##Easybits
 ============================================================
 """
-
 import data.settings as settings
 import data.mail as mail
 import os

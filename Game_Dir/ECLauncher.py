@@ -1,6 +1,8 @@
+
 from tkinter import *
-from tkinter import ttk
 from subprocess import Popen
+from tkinter import ttk
+
 from data.__VERSION__ import __VERSION__
 import os
 import sys
@@ -114,7 +116,7 @@ def main():
     def user_settings():
         os.system('@start notepad.exe %s' % settings_file)
 
-    # Tkinter UI
+    # tkinter UI
     global root
     global profile
     root = Tk()

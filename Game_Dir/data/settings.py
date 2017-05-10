@@ -9,6 +9,7 @@ And is provided by;
 Game Settings
 ============================================================
 """
+import hashlib
 from time import strftime
 import os
 import configparser

@@ -10,14 +10,13 @@ And is provided by;
 Game UI
 ============================================================
 """
+from tkinter import ttk
 
 import data.settings as settings
 import data.console as console
 import data.web as web
 import os
-import subprocess
 from tkinter import *
-from tkinter import ttk
 from data.autocomp import *
 import importlib
 # UI Settings

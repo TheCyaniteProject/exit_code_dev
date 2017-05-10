@@ -12,13 +12,16 @@ This File is for the 'whatsmyip.com' website
 ============================================================"""
 
 """========================= Imports ======================="""
-from Tkinter import *
-import data.settings as settings
+from tkinter import *
+
 """========================================================="""
 
-def web_site(web_page):
-	for widget in web_page.winfo_children():
-		widget.destroy()
-	Label(web_page, text='PCGo.shop - Buy quality computer parts online\nPCGo.shop is not yet implimented.', bg='white', font=(None, 10)).pack(expand=True)
-	Label(web_page, text='PCGo will be a website for upgrading your computer, allowing for faster, and more powerful hacks.', bg='white', font=(None, 10)).pack(expand=True)
 
+def web_site(web_page):
+    for widget in web_page.winfo_children():
+        widget.destroy()
+    Label(web_page, text='PCGo.shop - Buy quality computer parts online\nPCGo.shop is not yet implimented.', bg='white',
+          font=(None, 10)).pack(expand=True)
+    Label(web_page,
+          text='PCGo will be a website for upgrading your computer, allowing for faster, and more powerful hacks.',
+          bg='white', font=(None, 10)).pack(expand=True)
